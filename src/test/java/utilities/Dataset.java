@@ -4,6 +4,10 @@ import org.testng.annotations.DataProvider;
 
 public class Dataset {
 
+    public static String username = "standard_user";
+    public static String password = "secret_sauce";
+
+
     @DataProvider(name = "invalidData")
     public Object[][] data(){
         Object[][] dataset = {
@@ -22,6 +26,15 @@ public class Dataset {
                 {"standard_user", "secret_sauce"},
                 {"problem_user", "secret_sauce"},
                 {"performance_glitch_user", "secret_sauce"},
+        };
+        return dataset;
+    }
+
+    @DataProvider(name = "singlevalidData")
+    public Object data3(){
+        Object[][] dataset = {
+                {"standard_user", "secret_sauce"}
+
         };
         return dataset;
     }

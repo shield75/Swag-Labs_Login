@@ -41,6 +41,13 @@
       <artifactId>reactor-interruptible</artifactId>
       <version>0.1.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>2.24.0</version>
+    </dependency>
+
 
   </dependencies>
 </project>

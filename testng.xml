@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="F:/SQA/Swag Labs_Login/src/test/java/test_cases">
+        <classes>
+            <class name="test_cases.Home_Test">
+                <methods>
+                    <include name="cartTest"/>
+                </methods>
+            </class>
+            <class name="test_cases.Login_Test">
+                <methods>
+                    <include name="invalidloginAuth"/>
+                    <include name="validloginAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
