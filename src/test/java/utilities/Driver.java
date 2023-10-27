@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
@@ -46,14 +48,14 @@ public class Driver {
         }
     }
 
-    @BeforeSuite
+    @BeforeMethod
     public static synchronized void setBrowser(){
         WebDriver driver = createBrowser(getBrowserName());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         setLocalDriver(driver);
     }
-    @AfterSuite
+    @AfterMethod
     public static synchronized void quitBrowser(){
         getLocalDriver().quit();
     }
